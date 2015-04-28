@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Course" representedClassName="Course">
+        <attribute name="courseLecturer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseRoom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <relationship name="haslotsof" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Students" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="Students" representedClassName="Students" syncable="YES">
+        <attribute name="studentCourse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="studentGrade" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="studentName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasa" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="261" positionY="189" width="128" height="118"/>
+        <element name="Students" positionX="261" positionY="216" width="128" height="103"/>
+    </elements>
+</model>
