@@ -129,13 +129,13 @@
 		A6A9CB391AF002E2003B5D06 /* CoreDataLabTest2 */ = {
 			isa = PBXGroup;
 			children = (
-				A6A9CB751AF00F44003B5D06 /* ftDetailViewController.h */,
 				A6A9CB421AF002E2003B5D06 /* ftAppDelegate.h */,
 				A6A9CB431AF002E2003B5D06 /* ftAppDelegate.m */,
 				A6A9CB451AF002E2003B5D06 /* Main.storyboard */,
 				A6A9CB4B1AF002E2003B5D06 /* ftMasterViewController.h */,
 				A6A9CB4C1AF002E2003B5D06 /* ftMasterViewController.m */,
 				A6A9CB4F1AF002E2003B5D06 /* ftDetailViewController.m */,
+				A6A9CB751AF00F44003B5D06 /* ftDetailViewController.h */,
 				A6A9CB511AF002E2003B5D06 /* Images.xcassets */,
 				A6A9CB481AF002E2003B5D06 /* CoreDataLabTest2.xcdatamodeld */,
 				A6A9CB721AF007F2003B5D06 /* Students.h */,
@@ -485,6 +485,7 @@
 				A6A9CB6B1AF002E2003B5D06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6A9CB6C1AF002E2003B5D06 /* Build configuration list for PBXNativeTarget "CoreDataLabTest2Tests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				A6A9CB6E1AF002E2003B5D06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

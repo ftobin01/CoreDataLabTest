@@ -59,7 +59,9 @@
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:@"Course 1" forKey:@"courseName"];
+    [newManagedObject setValue:@"Mr Smith" forKey:@"courseLecturer"];
+    [newManagedObject setValue:@"L - 321 " forKey:@"courseRoom"];
     
     // Save the context.
     NSError *error = nil;
@@ -77,7 +79,7 @@
 {
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Search"
-              message:@"You Have Selected the: /n Search Course Function \n Which is Under Development.. \n Try again Soon..."
+              message:@"You Have Selected the: \n Search Course Function \n Which is Under Development.. \n Try again Soon..."
              delegate:self
     cancelButtonTitle:@"OK"
     otherButtonTitles:nil];
@@ -91,7 +93,7 @@
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:[NSDate date] forKey:@"courseName"];
     
     // Save the context.
     NSError *error = nil;
@@ -193,7 +195,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"courseName" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -232,7 +234,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"courseName" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -335,7 +337,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [[object valueForKey:@"courseName"] description];
 }
 
 @end

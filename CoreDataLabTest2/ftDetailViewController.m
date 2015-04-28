@@ -6,9 +6,24 @@
 //  Copyright (c) 2015 ___FULLUSERNAME___. All rights reserved.
 //
 
+
+
+
+
+
+
+
 #import "ftDetailViewController.h"
 
 @interface ftDetailViewController ()
+
+
+@property (weak, nonatomic) IBOutlet UILabel *screenCourseName;
+@property (weak, nonatomic) IBOutlet UILabel *screenRoomNum;
+@property (weak, nonatomic) IBOutlet UILabel *screenLecturer;
+
+
+
 - (void)configureView;
 @end
 
@@ -30,9 +45,22 @@
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
-    }
+    if (self.detailItem)
+    
+    {
+       
+    /*    self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+ */
+           _screenCourseName.text = [[self.detailItem valueForKey:@"courseName"] description];
+
+         _screenRoomNum.text = [[_detailItem valueForKey:@"courseRoom"] description];
+
+
+         _screenLecturer.text = [[self.detailItem valueForKey:@"courseLecturer"] description];
+  
+ 
+ }
+
 }
 
 - (void)viewDidLoad
